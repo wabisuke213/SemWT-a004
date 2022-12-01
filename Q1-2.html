@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q2-2</title>
+    <!-- <script defer src="Q1-2.js"></script> -->
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+      voluptatum, expedita laborum doloremque beatae quibusdam debitis optio
+      ratione assumenda voluptatibus.
+    </p>
+    <button>Light Mode</button>
+    <script>
+      const body = document.querySelector("body");
+      const p = document.querySelector("p");
+      const btn = document.querySelector("button");
+
+      let darkMode = false;
+
+      btn.addEventListener("click", (e) => {
+        if (!darkMode) {
+          darkMode = true;
+          body.style.backgroundColor = "#191919";
+          p.style.color = "#f1f5f7";
+          btn.innerText = "Dark Mode";
+          btn.style.borderColor = "#f1f5f7";
+          btn.style.backgroundColor = "#191919";
+          btn.style.color = "#f1f5f7";
+        } else {
+          darkMode = false;
+          body.style.backgroundColor = "#f1f5f7";
+          p.style.color = "#191919";
+          btn.style.borderColor = "#f1f5f7";
+          btn.innerText = "Light Mode";
+          btn.style.backgroundColor = "#f1f5f7";
+          btn.style.color = "#191919";
+        }
+      });
+    </script>
+  </body>
+</html>
